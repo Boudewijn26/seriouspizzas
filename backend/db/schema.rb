@@ -10,15 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005162314) do
+ActiveRecord::Schema.define(version: 20161005181704) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "pizza_orders", force: :cascade do |t|
+    t.integer  "order_id"
     t.integer  "pizza_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["pizza_id"], name: "index_orders_on_pizza_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
+    t.index ["order_id"], name: "index_pizza_orders_on_order_id"
+    t.index ["pizza_id"], name: "index_pizza_orders_on_pizza_id"
   end
 
   create_table "pizzas", force: :cascade do |t|
