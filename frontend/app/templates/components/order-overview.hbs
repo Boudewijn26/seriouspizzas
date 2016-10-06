@@ -1,0 +1,11 @@
+<div>
+  <h2>Order</h2>
+  <ul>
+    {{#each order.pizzaOrders as |pizzaOrder|}}
+      <li>
+        <span>{{pizzaOrder.pizza.name}}</span>
+        <span>{{pizzaOrder.amount}}</span>
+      </li>
+    {{/each}}
+  </ul>
+</div>
