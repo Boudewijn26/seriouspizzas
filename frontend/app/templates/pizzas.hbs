@@ -4,6 +4,9 @@
     Admin
   {{/link-to}}
 </header>
+{{#each model as |pizza|}}
+  {{pizza-listing pizza=pizza}}
+{{/each}}
 <footer>
   {{#link-to 'about' class="button"}}
     About
