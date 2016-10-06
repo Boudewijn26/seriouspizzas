@@ -4,7 +4,7 @@
     Admin
   {{/link-to}}
 </header>
-{{#each model as |pizza|}}
+{{#each model.pizzas as |pizza|}}
   {{pizza-listing pizza=pizza}}
 {{/each}}
 <footer>
