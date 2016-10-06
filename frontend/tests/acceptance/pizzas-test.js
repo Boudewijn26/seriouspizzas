@@ -3,11 +3,11 @@ import moduleForAcceptance from 'frontend/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | pizzas');
 
-test('visiting /', function(assert) {
+test('should redirect to pizzas', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/');
+    assert.equal(currentURL(), '/pizzas', 'should redirect');
   });
 });
 
