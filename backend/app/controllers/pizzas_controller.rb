@@ -5,11 +5,13 @@ class PizzasController < ApplicationController
   # GET /pizzas.json
   def index
     @pizzas = Pizza.all
+    render json: @pizzas
   end
 
   # GET /pizzas/1
   # GET /pizzas/1.json
   def show
+    render json: @pizza
   end
 
   # POST /pizzas
@@ -17,7 +19,7 @@ class PizzasController < ApplicationController
   def create
     @pizza = Pizza.new(pizza_params)
     if @pizza.save
-      render :show, status: :created, location: @pizza
+      render json: @pizza
     else
       render json: @pizza.errors, status: :unprocessable_entity
     end
@@ -27,7 +29,7 @@ class PizzasController < ApplicationController
   # PATCH/PUT /pizzas/1.json
   def update
     if @pizza.update(pizza_params)
-      render :show, status: :ok, location: @pizza
+      render json: @pizza
     else
       render json: @pizza.errors, status: :unprocessable_entity
     end
@@ -47,6 +49,6 @@ class PizzasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pizza_params
-      params.require(:pizza).permit(:name, :price, :description)
+      res = ActiveModelSerializers::Deserialization.jsonapi_parse(params)
     end
 end
