@@ -66,3 +66,20 @@ body {
 .order-overview .total {
   text-align: right;
 }
+
+.floating-button {
+  position: fixed;
+  right: 1em;
+  bottom: 2em;
+}
+
+.pizza-table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+}
