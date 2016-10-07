@@ -5,7 +5,7 @@
   {{/link-to}}
 </header>
 {{#each model.pizzas as |pizza|}}
-  {{pizza-listing pizza=pizza order=model.order}}
+  {{pizza-listing pizza=pizza order=model.order class="pizza-listing"}}
 {{/each}}
 {{order-overview order=model.order}}
 <footer>

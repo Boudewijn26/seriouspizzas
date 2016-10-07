@@ -1,10 +1,18 @@
-<article>
-  <h3>{{pizza.name}}</h3>
-  <div class="price">
-    {{pizza.price}}
+<article class="mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title pizza-title">
+    <h3>
+      <div class="mdl-card__title-text">{{pizza.name}}</div>
+      <div class="mdl-card__subtitle-text">
+        {{pizza.price}}
+      </div>
+    </h3>
   </div>
-  <div class="description">
+  <div class="mdl-card__supporting-text">
     {{pizza.description}}
   </div>
-  <button {{action 'addToOrder'}}>Add</button>
+  <div class="mdl-card__actions mdl-card--border">
+    <button
+      class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
+      {{action 'addToOrder'}}><i class="material-icons">add</i></button>
+  </div>
 </article>
