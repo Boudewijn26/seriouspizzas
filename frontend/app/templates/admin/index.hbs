@@ -1,1 +1,18 @@
-{{outlet}}
+<h2>Pizzas</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  {{#each model as |pizza|}}
+    <tr>
+      <td>{{pizza.name}}</td>
+      <td>{{pizza.price}}</td>
+      <td>{{#link-to "admin.edit" pizza}}Edit{{/link-to}}</td>
+      <td><button {{action "destroy" pizza}}>Delete</button></td>
+    </tr>
+  {{/each}}
+</table>
+
+{{#link-to "admin.new"}}New{{/link-to}}
