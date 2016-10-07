@@ -16,6 +16,9 @@
   background: url('images/cover.jpg') center / cover;
   background-position-y: -800px;
   background-repeat: no-repeat;
+}
+
+body {
   background-color: #eaeaf1;
 }
 
