@@ -14,7 +14,7 @@
 
 .serious-pizzas-transparent {
   background: url('images/cover.jpg') center / cover;
-  background-position-y: -800px;
+  background-position-y: -650px;
   background-repeat: no-repeat;
   background-color: #eaeaf1;
 }
@@ -31,4 +31,35 @@
   width: 1332px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.order-overview {
+  z-index: 9;
+  background-color: ghostwhite;
+  min-height: 150px;
+  width: 250px;
+  position: fixed;
+  bottom: 0;
+  right: 1em;
+  padding: 1em;
+}
+
+.order-overview table {
+  width: 100%;
+}
+
+.order-overview table th {
+  text-align: left;
+}
+
+.order-overview table .amount {
+  text-align: right;
+}
+
+.order-overview ul > li {
+  list-style-type: none;
+}
+
+.order-overview .total {
+  text-align: right;
 }
