@@ -10,7 +10,7 @@ export default Ember.Component.extend({
       } else {
         pizzaOrder = this.get('pizza.store').createRecord('pizza-order', {
           pizza: this.get('pizza'),
-          amount: 0,
+          amount: 1,
           order: this.get('order')
         });
         this.get('order.pizzaOrders').pushObject(pizzaOrder);
