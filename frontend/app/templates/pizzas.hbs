@@ -1,15 +1,4 @@
-{{outlet}}
-<header>
-  {{#link-to 'admin' class="button"}}
-    Admin
-  {{/link-to}}
-</header>
 {{#each model.pizzas as |pizza|}}
   {{pizza-listing pizza=pizza order=model.order class="pizza-listing"}}
 {{/each}}
 {{order-overview order=model.order}}
-<footer>
-  {{#link-to 'about' class="button"}}
-    About
-  {{/link-to}}
-</footer>

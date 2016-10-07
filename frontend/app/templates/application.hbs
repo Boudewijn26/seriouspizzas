@@ -1,3 +1,19 @@
-<h1>Serious Pizzas</h1>
+<div class="serious-pizzas-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        {{#link-to 'admin' class="mdl-navigation__link"}}Admin{{/link-to}}
+        {{#link-to 'about' class="mdl-navigation__link"}}About{{/link-to}}
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <h1>Serious Pizzas</h1>
+    {{outlet}}
+  </main>
+</div>
 
-{{outlet}}
+

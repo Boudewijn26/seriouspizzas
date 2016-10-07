@@ -1,3 +1,14 @@
 .pizza-listing {
   display: inline-block;
 }
+
+.serious-pizzas-transparent {
+  background: url('images/cover.jpg') center / cover;
+}
+
+.serious-pizzas-transparent h1 {
+  color: white;
+  text-align: center;
+  text-shadow: 0 5px 2px black;
+  font-size: 100px;
+}
