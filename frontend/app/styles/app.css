@@ -1,9 +1,22 @@
 .pizza-listing {
   display: inline-block;
+  margin-top: 1em;
+}
+
+.pizza-listing .mdl-card__actions {
+  display: flex;
+  align-items: center;
+}
+
+.pizza-listing .mdl-card__actions > .material-icons {
+  padding-right: 10px;
 }
 
 .serious-pizzas-transparent {
   background: url('images/cover.jpg') center / cover;
+  background-position-y: -800px;
+  background-repeat: no-repeat;
+  background-color: #eaeaf1;
 }
 
 .serious-pizzas-transparent h1 {
@@ -11,4 +24,11 @@
   text-align: center;
   text-shadow: 0 5px 2px black;
   font-size: 100px;
+  margin: 140px;
+}
+
+.pizza-grid {
+  width: 1332px;
+  margin-left: auto;
+  margin-right: auto;
 }

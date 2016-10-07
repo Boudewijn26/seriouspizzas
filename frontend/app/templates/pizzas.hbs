@@ -1,4 +1,5 @@
-{{#each model.pizzas as |pizza|}}
-  {{pizza-listing pizza=pizza order=model.order class="pizza-listing"}}
-{{/each}}
-{{order-overview order=model.order}}
+<div class="pizza-grid">
+  {{#each model.pizzas as |pizza|}}
+    {{pizza-listing pizza=pizza order=model.order class="pizza-listing"}}
+  {{/each}}
+</div>{{order-overview order=model.order}}
