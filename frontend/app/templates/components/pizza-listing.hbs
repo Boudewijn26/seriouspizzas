@@ -10,13 +10,11 @@
   <div class="mdl-card__supporting-text">
     {{pizza.description}}
   </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <button
-      class="mdl-button mdl-js-button mdl-button--colored"
-      {{action 'addToOrder'}}>
+  {{#mdl-card-actions}}
+    {{#mdl-button action="addToOrder"}}
       Add to order
-    </button>
+    {{/mdl-button}}
     <div class="mdl-layout-spacer"></div>
     <i class="material-icons">add</i>
-  </div>
+  {{/mdl-card-actions}}
 </article>
