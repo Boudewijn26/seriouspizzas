@@ -41,5 +41,8 @@
     "ember-material-lite": "0.2.5",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.1"
+  },
+  "dependencies": {
+    "ember-data-route": "^0.2.0"
   }
 }
