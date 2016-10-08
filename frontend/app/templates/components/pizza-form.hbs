@@ -1,21 +1,21 @@
 <form>
-  <div>
-    <label>
-      Name:
-      {{input type="text" value=pizza.name}}
-    </label>
+  <div class="mdl-textfield mdl-js-textfield">
+    {{input type="text" value=pizza.name class="mdl-textfield__input" id="namefield"}}
+    <label class="mdl-textfield__label" for="namefield">Name...</label>
   </div>
-  <div>
-    <label>
+  <br />
+  <div class="mdl-textfield mdl-textfield-js">
+    {{input type="number" value=pizza.price class="mdl-textfield__input" id="pricefield"}}
+    <label class="mdl-textfield__label" for="pricefield">
       Price:
-      {{input type="number" value=pizza.price}}
     </label>
   </div>
-  <div>
-    <label>
+  <br />
+  <div class="mdl-textfield mdl-js-textfield">
+    {{textarea value=pizza.description class="mdl-textfield__input" id="descriptionfield"}}
+    <label for="descriptionfield" class="mdl-textfield__label">
       Description:
-      {{textarea value=pizza.description}}
     </label>
   </div>
-  <button {{action "save"}}>Save</button>
+  <button class="mdl-button mdl-js-button" {{action "save"}}>Save</button>
 </form>
