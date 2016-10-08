@@ -13,9 +13,8 @@
 }
 
 .serious-pizzas-transparent {
-  background: url('images/cover.jpg') center / cover;
-  background-position-y: -800px;
-  background-repeat: no-repeat;
+  background: url('images/cover.jpg') top no-repeat;
+  background-size: 100% auto;
 }
 
 body {
