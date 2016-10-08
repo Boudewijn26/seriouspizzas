@@ -1,21 +1,9 @@
-<form>
-  <div>
-    <label>
-      Name:
-      {{input type="text" value=pizza.name}}
-    </label>
-  </div>
-  <div>
-    <label>
-      Price:
-      {{input type="number" value=pizza.price}}
-    </label>
-  </div>
-  <div>
-    <label>
-      Description:
-      {{textarea value=pizza.description}}
-    </label>
-  </div>
-  <button {{action "save"}}>Save</button>
+<form class="pizza-form">
+  {{mdl-textfield label="Name..." value=pizza.name}}
+  <br />
+  {{mdl-textfield type="number" label="Price..." value=pizza.price}}
+  <br />
+  {{mdl-textarea label="Description..." value=pizza.description}}
+  <br />
+  {{#mdl-button action="save"}}Save{{/mdl-button}}
 </form>
