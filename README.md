@@ -14,6 +14,8 @@ Requirements:
 
 Installation and running:
 
+> git clone https://github.com/Boudewijn26/seriouspizzas.git
+
 > cd backend  
 > bundle  
 > rails db:migrate  
