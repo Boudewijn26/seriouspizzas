@@ -14,7 +14,8 @@ Requirements:
 
 Installation and running:
 
-> git clone https://github.com/Boudewijn26/seriouspizzas.git
+> git clone https://github.com/Boudewijn26/seriouspizzas.git  
+> cd seriouspizzas
 
 > cd backend  
 > bundle  
