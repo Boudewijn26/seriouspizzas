@@ -66,6 +66,11 @@ body {
   text-align: right;
 }
 
+.order-overview .total button {
+  text-align: left;
+  margin-top: 1em;
+}
+
 .floating-button {
   position: fixed;
   right: 1em;
