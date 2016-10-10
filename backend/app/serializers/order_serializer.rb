@@ -1,5 +1,4 @@
 class OrderSerializer < ActiveModel::Serializer
   attributes :id
-  has_one :user
-  has_one :pizza
+  has_many :pizza_orders
 end
