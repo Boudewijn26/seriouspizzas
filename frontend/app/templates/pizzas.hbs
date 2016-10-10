@@ -1,0 +1,9 @@
+<div class="pizza-grid">
+  {{#each model.pizzas as |pizza|}}
+    {{pizza-listing pizza=pizza order=model.order class="pizza-listing"}}
+  {{/each}}
+</div>
+{{order-overview
+  order=model.order
+  class="order-overview mdl-shadow--4dp mdl-card"
+  place=(action "placeOrder")}}

@@ -1,0 +1,22 @@
+<div>
+  <h3>Order</h3>
+  <table>
+    <tr>
+      <th>Pizza</th>
+      <th>Price</th>
+      <th class="amount">Amount</th>
+    </tr>
+    {{#each order.pizzaOrders as |pizzaOrder|}}
+      <tr>
+        <td>{{pizzaOrder.pizza.name}}</td>
+        <td>{{format-money pizzaOrder.pizza.price}}</td>
+        <td class="amount">{{pizzaOrder.amount}}</td>
+      </tr>
+    {{/each}}
+  </table>
+  <div class="mdl-card__actions mdl-card--border total">
+    {{format-money order.total}}
+    <br />
+    {{#mdl-button action="placeOrder"}}Place Order{{/mdl-button}}
+  </div>
+</div>

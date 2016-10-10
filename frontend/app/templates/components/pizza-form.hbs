@@ -1,0 +1,9 @@
+<form class="pizza-form">
+  {{mdl-textfield label="Name..." value=pizza.name}}
+  <br />
+  {{mdl-textfield type="number" label="Price..." value=pizza.price}}
+  <br />
+  {{mdl-textarea label="Description..." value=pizza.description}}
+  <br />
+  {{#mdl-button action="save"}}Save{{/mdl-button}}
+</form>

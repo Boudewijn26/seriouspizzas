@@ -1,0 +1,28 @@
+<table class="pizza-table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |pizza|}}
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric">{{pizza.name}}</td>
+        <td>{{format-money pizza.price}}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{#link-to "admin.edit" pizza}}Edit{{/link-to}}</td>
+        <td class="mdl-data-table__cell--non-numeric">
+          <button
+            class="mdl-button mdl-js-button mdl-js-ripple-effect"
+            {{action "destroy" pizza}}>Delete</button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{#link-to "admin.new"
+  class="floating-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+  tagName="button"}}<i class="material-icons">add</i>{{/link-to}}

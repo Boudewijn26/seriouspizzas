@@ -1,0 +1,95 @@
+.pizza-listing {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.pizza-listing .mdl-card__actions {
+  display: flex;
+  align-items: center;
+}
+
+.pizza-listing .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+
+.serious-pizzas-transparent {
+  background: url('images/cover.jpg') top no-repeat;
+  background-size: 100% auto;
+}
+
+body {
+  background-color: #eaeaf1;
+}
+
+.serious-pizzas-transparent h1 {
+  color: white;
+  text-align: center;
+  text-shadow: 0 5px 2px black;
+  font-size: 100px;
+  margin: 140px;
+}
+
+.pizza-grid {
+  width: 1332px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.order-overview {
+  z-index: 9;
+  background-color: ghostwhite;
+  min-height: 150px;
+  width: 250px;
+  position: fixed;
+  bottom: 0;
+  right: 1em;
+  padding: 1em;
+}
+
+.order-overview table {
+  width: 100%;
+}
+
+.order-overview table th {
+  text-align: left;
+}
+
+.order-overview table .amount {
+  text-align: right;
+}
+
+.order-overview ul > li {
+  list-style-type: none;
+}
+
+.order-overview .total {
+  text-align: right;
+}
+
+.order-overview .total button {
+  text-align: left;
+  margin-top: 1em;
+}
+
+.floating-button {
+  position: fixed;
+  right: 1em;
+  bottom: 2em;
+}
+
+.pizza-table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pizza-form {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
