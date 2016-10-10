@@ -51,6 +51,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:user_id, :pizza_id, :created_at)
+      ActiveModelSerializers::Deserialization.jsonapi_parse(params)
     end
 end
