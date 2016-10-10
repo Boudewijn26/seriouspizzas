@@ -5,12 +5,18 @@
       <th>Pizza</th>
       <th>Price</th>
       <th class="amount">Amount</th>
+      <th></th>
     </tr>
     {{#each order.pizzaOrders as |pizzaOrder|}}
       <tr>
         <td>{{pizzaOrder.pizza.name}}</td>
         <td>{{format-money pizzaOrder.pizza.price}}</td>
         <td class="amount">{{pizzaOrder.amount}}</td>
+        <td>
+          {{#mdl-button action=(action "clearPizzaOrder" pizzaOrder)}}
+            <i class="material-icons">clear</i>
+          {{/mdl-button}}
+        </td>
       </tr>
     {{/each}}
   </table>
