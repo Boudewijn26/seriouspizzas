@@ -10,6 +10,7 @@ Requirements:
 * Ruby
 * Rails
 * sqlite
+* Bower
 
 Installation and running:
 
