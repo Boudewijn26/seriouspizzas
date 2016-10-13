@@ -19,6 +19,7 @@ class PizzasController < ApplicationController
   def create
     @pizza = Pizza.new(pizza_params)
     if @pizza.save
+      ActionCable.server.broadcast 'pizzas', {}
       render json: @pizza
     else
       render json: @pizza.errors, status: :unprocessable_entity
@@ -29,6 +30,7 @@ class PizzasController < ApplicationController
   # PATCH/PUT /pizzas/1.json
   def update
     if @pizza.update(pizza_params)
+      ActionCable.server.broadcast 'pizzas', {}
       render json: @pizza
     else
       render json: @pizza.errors, status: :unprocessable_entity
@@ -39,6 +41,7 @@ class PizzasController < ApplicationController
   # DELETE /pizzas/1.json
   def destroy
     @pizza.destroy
+    ActionCable.server.broadcast 'pizzas', {}
   end
 
   private
