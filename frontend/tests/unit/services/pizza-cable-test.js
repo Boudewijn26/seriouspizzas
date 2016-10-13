@@ -1,12 +1,12 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:pizzas', 'Unit | Controller | pizzas', {
+moduleFor('service:pizza-cable', 'Unit | Service | pizza cable', {
   // Specify the other units that are required for this test.
-  needs: ['service:pizza-cable', 'service:cable']
+  needs: ['service:cable']
 });
 
 // Replace this with your real tests.
 test('it exists', function(assert) {
-  let controller = this.subject();
-  assert.ok(controller);
+  let service = this.subject();
+  assert.ok(service);
 });
